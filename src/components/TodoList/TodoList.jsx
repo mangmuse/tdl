@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AddTodoForm from "../AddTodoForm/AddTodoForm";
-import Todo from "../Todo/Todo";
+import TodoItem from "../Todo/TodoItem";
 
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -17,7 +17,7 @@ export default function TodoList() {
       <div>
         <ul>
           {todos.map((todo) => (
-            <Todo
+            <TodoItem
               key={todo.id}
               todo={todo}
               onUpdate={handleUpdate}
