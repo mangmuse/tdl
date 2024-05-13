@@ -5,9 +5,22 @@
 }
 
 .listBox {
+  padding: 1rem;
   background-color: var(--color-bg);
   flex: 1;
 }
 
-.list {
+.pendingTodos {
+  margin-bottom: 0.3rem;
+}
+
+.toggleBtn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
 }

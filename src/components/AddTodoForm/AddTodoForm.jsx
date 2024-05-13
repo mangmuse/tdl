@@ -15,6 +15,7 @@ export default function AddTodoForm({ onAdd }) {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
+        placeholder="할 일 추가하기"
         className={styles.input}
         type="text"
         value={text}

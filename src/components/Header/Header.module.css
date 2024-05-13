@@ -2,9 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 5.5rem;
   background-color: var(--color-bg-dark);
   padding: 0 1rem;
+}
+
+.toggleBtn {
+  border: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggleBtn:hover {
+  scale: 1.1;
+  color: var(--color-accent);
 }
 
 .title {
