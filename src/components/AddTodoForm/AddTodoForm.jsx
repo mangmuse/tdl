@@ -6,7 +6,7 @@ export default function AddTodoForm({ onAdd }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text.trim() !== "") {
-      onAdd({ id: uuid, text, status: "pending" });
+      onAdd({ id: uuid(), text, status: "pending" });
       setText("");
     }
   };
