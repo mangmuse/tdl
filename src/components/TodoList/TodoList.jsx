@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddTodoForm from "../AddTodoForm/AddTodoForm";
-import TodoItem from "../Todo/TodoItem";
+import TodoItem from "../TodoItem/TodoItem";
+import styles from "./TodoList.module.css";
 
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -13,8 +14,8 @@ export default function TodoList() {
   const handleDelete = (toBeDeleted) =>
     setTodos((todos) => todos.filter((todo) => toBeDeleted.id !== todo.id));
   return (
-    <section>
-      <div>
+    <section className={styles.container}>
+      <div className={styles.listBox}>
         <ul>
           {todos.map((todo) => (
             <TodoItem
@@ -25,7 +26,7 @@ export default function TodoList() {
             />
           ))}
         </ul>
-        <ul></ul>
+        <ul className={styles.list}></ul>
       </div>
       <AddTodoForm onAdd={handleAdd} />
     </section>

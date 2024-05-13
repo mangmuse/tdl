@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
+import styles from "./AddTodoForm.module.css";
 
 export default function AddTodoForm({ onAdd }) {
   const [text, setText] = useState("");
@@ -12,9 +13,14 @@ export default function AddTodoForm({ onAdd }) {
   };
   const handleChange = (e) => setText(e.target.value);
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={text} onChange={handleChange} />
-      <button>등록</button>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input
+        className={styles.input}
+        type="text"
+        value={text}
+        onChange={handleChange}
+      />
+      <button className={styles.button}>추가</button>
     </form>
   );
 }

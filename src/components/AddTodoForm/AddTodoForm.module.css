@@ -1,0 +1,24 @@
+.form {
+  display: flex;
+  padding: 1.4rem 1rem;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+}
+
+.button {
+  font-size: 2rem;
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  padding: 0rem 1.8rem;
+}

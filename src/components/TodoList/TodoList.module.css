@@ -1,0 +1,13 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.listBox {
+  background-color: var(--color-bg);
+  flex: 1;
+}
+
+.list {
+}
