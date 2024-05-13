@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  font-family: "Freeman", sans-serif;
   align-items: center;
   height: 5.5rem;
   background-color: var(--color-bg-dark);
@@ -21,6 +22,6 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--color-accent);
 }
