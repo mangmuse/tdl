@@ -12,7 +12,7 @@ export function DarkModeProvider({ children }) {
     const isDarkMode =
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-cheme: dark"));
+        window.matchMedia("(prefers-color-cheme: dark)").matches);
     setDarkMode(isDarkMode);
     updateDarkMode(isDarkMode);
   }, []);
