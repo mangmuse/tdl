@@ -11,11 +11,7 @@
 }
 
 html.dark {
-  /* --color-bg-dark: #171833; */
-  /* --color-bg-dark: #15151a; */
   --color-bg-dark: #19191c;
-
-  /* --color-bg: #1f304b; */
   --color-bg: #282828;
   --color-grey: #d1d1d1;
   --color-text: #fdfffd;
@@ -54,10 +50,7 @@ button:hover {
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
-/* 
-::-webkit-scrollbar-track {
-  background-color: var(--color-bg-dark);
-} */
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-grey);
 }

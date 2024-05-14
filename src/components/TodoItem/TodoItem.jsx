@@ -1,7 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import styles from "./TodoItem.module.css";
 
-export default function Todo({ todo, onUpdate, onDelete }) {
+export default function TodoItem({ todo, onUpdate, onDelete }) {
   const { id, status, text } = todo;
   const handleChange = (e) => {
     const status = e.target.checked ? "completed" : "pending";
