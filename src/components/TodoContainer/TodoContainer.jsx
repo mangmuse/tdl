@@ -5,7 +5,6 @@ import TodoList from "../TodoList/TodoList";
 export default function TodoContainer({ todos, onUpdate, onDelete }) {
   const { pendingTodos, completedTodos, isVisible, handleToggle } =
     useFilteredTodos(todos);
-
   return (
     <section className={styles.listContainer}>
       <TodoList
