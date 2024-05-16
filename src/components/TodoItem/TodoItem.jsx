@@ -3,10 +3,8 @@ import styles from "./TodoItem.module.css";
 
 export default function TodoItem({ todo, onUpdate, onDelete }) {
   const { id, isDone, text } = todo;
-  const handleChange = (e) => {
-    const isDone = e.target.checked ? true : false;
-    onUpdate({ ...todo, isDone });
-  };
+  const handleChange = (e) => onUpdate({ ...todo, isDone: e.target.checked });
+
   const handleDelete = () => onDelete(todo);
   return (
     <li className={styles.todoItem}>
@@ -18,7 +16,7 @@ export default function TodoItem({ todo, onUpdate, onDelete }) {
         checked={isDone}
       />
       <label
-        className={`${styles.text} ${isDone && styles.isDone}`}
+        className={`${styles.text} ${isDone ? styles.isDone : ""}`}
         htmlFor={id}
         type="text"
       >
