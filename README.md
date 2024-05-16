@@ -22,10 +22,10 @@ todo 목록을 필터링하여 보여주는 컨테이너 컴포넌트입니다. 
 
 ### `TodoList.jsx`
 
-todo 목록을 보여주는 컴포넌트입니다. props로는 `todos`, `title`, `isVisible`, `onToggle`, `actions`를 받습니다.
+todo 목록을 보여주는 컴포넌트입니다. props로는 `todos`, `isDone`, `isVisible`, `onToggle`, `actions`를 받습니다.
 
 - **todos**: todo 목록 배열입니다.
-- **title**: 목록의 제목입니다.
+- **isDone**: todo의 진행 상태입니다.
 - **isVisible**: 목록의 가시성 상태입니다.
 - **onToggle**: 목록 가시성 토글 함수입니다.
 - **actions**: `onUpdate`와 `onDelete` 함수를 포함한 객체입니다.

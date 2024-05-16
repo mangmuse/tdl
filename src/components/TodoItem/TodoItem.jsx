@@ -2,10 +2,10 @@ import { FaTrash } from "react-icons/fa";
 import styles from "./TodoItem.module.css";
 
 export default function TodoItem({ todo, onUpdate, onDelete }) {
-  const { id, status, text } = todo;
+  const { id, isDone, text } = todo;
   const handleChange = (e) => {
-    const status = e.target.checked ? "completed" : "pending";
-    onUpdate({ ...todo, status });
+    const isDone = e.target.checked ? true : false;
+    onUpdate({ ...todo, isDone });
   };
   const handleDelete = () => onDelete(todo);
   return (
@@ -15,7 +15,7 @@ export default function TodoItem({ todo, onUpdate, onDelete }) {
         onChange={handleChange}
         id={id}
         type="checkbox"
-        checked={status === "completed"}
+        checked={isDone}
       />
       <label className={styles.text} htmlFor={id} type="text">
         {text}

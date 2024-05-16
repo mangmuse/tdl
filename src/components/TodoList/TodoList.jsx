@@ -3,16 +3,17 @@ import styles from "./TodoList.module.css";
 
 export default function TodoList({
   todos,
-  title,
+  isDone,
   isVisible,
   onToggle,
   actions,
 }) {
+  const toggleBtnText = isDone ? "완료됨" : "진행중";
   return (
     <ul className={styles.todos}>
       {todos.length > 0 && (
         <button className={styles.toggleBtn} onClick={onToggle}>
-          {title} {todos.length}
+          {toggleBtnText} {todos.length}
         </button>
       )}
       {isVisible &&

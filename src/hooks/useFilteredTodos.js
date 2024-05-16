@@ -18,7 +18,7 @@ export default function useFilteredTodos(todos) {
 function getFilteredTodos(todos) {
   return todos.reduce(
     ([pendingTodos, completedTodos], todo) => {
-      if (todo.status === "pending") {
+      if (!todo.isDone) {
         pendingTodos.push(todo);
       } else {
         completedTodos.push(todo);

@@ -9,14 +9,14 @@ export default function TodoContainer({ todos, onUpdate, onDelete }) {
     <section className={styles.listContainer}>
       <TodoList
         todos={pendingTodos}
-        title="진행중"
+        isDone={false}
         isVisible={isVisible.pendingTodos}
         onToggle={() => handleToggle("pendingTodos")}
         actions={{ onUpdate, onDelete }}
       />
       <TodoList
         todos={completedTodos}
-        title="완료"
+        isDone={true}
         isVisible={isVisible.completedTodos}
         onToggle={() => handleToggle("completedTodos")}
         actions={{ onUpdate, onDelete }}
