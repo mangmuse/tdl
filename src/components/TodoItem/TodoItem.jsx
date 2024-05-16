@@ -17,7 +17,11 @@ export default function TodoItem({ todo, onUpdate, onDelete }) {
         type="checkbox"
         checked={isDone}
       />
-      <label className={styles.text} htmlFor={id} type="text">
+      <label
+        className={`${styles.text} ${isDone && styles.isDone}`}
+        htmlFor={id}
+        type="text"
+      >
         {text}
       </label>
       <button className={styles.button} onClick={handleDelete}>
